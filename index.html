@@ -3,19 +3,30 @@
   <head>
     <title>Florida Energy Systems Consortium (FESC)</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
     <!-- START: social meta tags -->
-    <meta property="og:title" content="Florida Energy Systems Consortium">
-    <meta property="og:description" content="The Florida Energy Systems Consortium (FESC) was created by the Florida State government to promote collaboration among the energy experts at its 12 supported universities to share energy-related expertise.">
-    <meta property="og:image" content="https://kev-n.github.io/FESC/img/social_img.jpg">
-    <meta property="og:url" content="https://kev-n.github.io/FESC/index.html">
-    <meta property="og:type" content="website">
-    <meta name="twitter:title" content="Florida Energy Systems Consortium">
-    <meta name="twitter:description" content="The Florida Energy Systems Consortium (FESC) was created by the Florida State government to promote collaboration among the energy experts at its 12 supported universities to share energy-related expertise.">
-    <meta name="twitter:image" content="https://kev-n.github.io/FESC/img/social_img.jpg">
-    <meta name="twitter:card" content="summary_large_image">
+    <meta content="Florida Energy Systems Consortium" property="og:title">
+    <meta content="The Florida Energy Systems Consortium (FESC) was created by the Florida State government to promote collaboration among the energy experts at its 12 supported universities to share energy-related expertise." property="og:description">
+    <meta content="https://kev-n.github.io/FESC/img/social_img.jpg" property="og:image">
+    <meta content="https://kev-n.github.io/FESC/index.html" property="og:url">
+    <meta content="website" property="og:type">
+    <meta content="Florida Energy Systems Consortium" name="twitter:title">
+    <meta content="The Florida Energy Systems Consortium (FESC) was created by the Florida State government to promote collaboration among the energy experts at its 12 supported universities to share energy-related expertise." name="twitter:description">
+    <meta content="https://kev-n.github.io/FESC/img/social_img.jpg" name="twitter:image">
+    <meta content="summary_large_image" name="twitter:card">
     <!-- END: social meta tags -->
+    <!-- stylesheets -->
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Imprima" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <link href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" rel="stylesheet">
+    <!--[if lte IE 8] -->
+    <link href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-old-ie-min.css" rel="stylesheet">
+    <!--[if gt IE 8]><!-->
+    <link href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css" rel="stylesheet">
+    <link href="styles/styles.css" rel="stylesheet">
+    <!-- END: stylesheets -->
     <!-- START: Twitter JS widget -->
     <script>
       window.twttr = (function(d, s, id) {
@@ -40,105 +51,170 @@
   <body>
     <!-- JavaScript SDK snippet enabling Facebook share button -->
     <div id="fb-root"></div>
-    <script>(function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12';
-      fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
+    <script>
+      (function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12';
+          fjs.parentNode.insertBefore(js, fjs);
+          }(document, 'script', 'facebook-jssdk'));
     </script>
-    <header>
-      <img src="img/header_logo.png" alt="FESC logo">     
-      <!-- top navi-bar -->      
-      <div class="logo">
-        <h1><a href="index.html"><strong>FESC</strong></a></h1>
-      </div>
-      <div class="menu">
-        <ul class="main-menu">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="research.html">Research</a></li>
-          <li><a href="education.html">Education</a></li>
-          <li><a href="#">Outreach</a></li>
-          <li><a href="#">Facilities</a></li>
-          <li><a href="#">Energy Industry</a></li>
-          <li><a href="#">Advisory Board</a></li>
-          <li><a href="#">Contact Us</a></li>
-        </ul>
-        <div class="menu-toggle">
-          <span></span>
-          <span></span>
-          <span></span>
+    <div id="layout">
+      <!-- Menu toggle -->
+      <a class="menu-link" href="#menu" id="menuLink">
+        <!-- Hamburger icon -->
+        <span></span>
+      </a>
+      <div id="menu">
+        <div class="pure-menu">
+          <a class="pure-menu-heading" href="#"><strong>FESC</strong></a>
+          <div class="pure-menu custom-restricted-width">
+            <ul class="pure-menu-list">
+              <li class="pure-menu-item menu-item-divided pure-menu-selected">
+                <a class="pure-menu-link" href="index.html" id="menuLink1">Home</a>
+              </li>
+              <li class="pure-menu-item">
+                <a class="pure-menu-link" href="research.html">Research</a>
+              </li>
+              <li class="pure-menu-item">
+                <a class="pure-menu-link" href="education.html">Education</a>
+              </li>
+              <li class="pure-menu-item">
+                <a class="pure-menu-link" href="#">Outreach</a>
+              </li>
+              <li class="pure-menu-item">
+                <a class="pure-menu-link" href="#">Facilities</a>
+              </li>
+              <li class="pure-menu-item">
+                <a class="pure-menu-link" href="#">Energy Industry</a>
+              </li>
+              <li class="pure-menu-item">
+                <a class="pure-menu-link" href="#">Advisory Board</a>
+              </li>
+              <li class="pure-menu-item">
+                <a class="pure-menu-link" href="#">Contact Us</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-      <ul class="social-menu">
-        <li><a href=""><i class="fa fa-facebook"></i></a></li>
-        <li><a href=""><i class="fa fa-twitter"></i></a></li>
-        <li><a href=""><i class="fa fa-linkedin"></i></a></li>
-        <li><a href=""><i class="fa fa-youtube"></i></a></li>
-      </ul>
-    </header>
-    <!-- nav menu on side -->
-    <nav id="side-nav">
-      <a href="index.html">Home</a>
-      <ul>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Florida Energy Facts</a></li>
-        <li><a href="#">FESC Expertise</a></li>
-        <li><a href="#">FL University Research</a></li>
-        <li><a href="#">Technology Commercialization</a></li>
-        <li><a href="#">FESC Conferences</a></li>
-        <li><a href="#">Annual Reports</a></li>
-        <li><a href="#">Frequently Asked Questions</a></li>
-        <li><a href="#">Links</a></li>
-      </ul>
-    </nav>
-    <!-- START: MAIN CONTENT -->
-    <article>
-      <h2>FESC: Bringing Energy Solutions to Florida, the Nation and the World</h2>
-      <aside>
-        <button>Download our brochure</button>
-      </aside>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/YA2ofbdd-G8?rel=0"></iframe>
-      <p>The Florida Energy Systems Consortium (FESC) was created by the Florida State government to promote collaboration among the energy experts at its 12 supported universities to share energy-related expertise.The consortium assists the state in
-        the development and implementation of an environmentally compatible, sustainable, and efficient energy strategic plan.The Consortium was charged to
-        <span class="inline-quote">&lsquo;perform research and development on innovative energy systems that lead to alternative energy strategies, improved energy efficiencies, and expanded economic development for the state.&rsquo;</span> The legislature
-        appropriated funding for research at five of the universities as well as support for education, outreach, and technology commercialization.The Consortium reports to and provides guidance on an as needed basis to the Florida Legislature, Executive
-        Office of the Governor, and the Florida's Office of Energy housed in the Florida Department of Agriculture and Consumer Services.
-      </p>
-      <p>Overarching to the Consortium's research strategy is an energy systems approach to identify innovation opportunities, prepare an energy workforce, and guide economic development.</p>
-      <p>Through collaborative research and development across the State University System and the industry, the goal of the consortium is to become a world leader in energy research, education, technology, and energy systems analysis.In so doing, the
-        consortium shall:
-      </p>
-      <ol>
-        <li>Coordinate and initiate increased collaborative interdisciplinary energy research among the universities and the energy industry.</li>
-        <li>Assist in the creation and development of a Florida-based energy technology industry through efforts that would expedite commercialization of innovative energy technologies by taking advantage of the energy expertise within the State University
-          System, high-technology incubators, industrial parks, and industry-driven research centers.
-        </li>
-        <li>Provide a state resource for objective energy systems analysis.</li>
-        <li>Develop education and outreach programs to prepare a qualified energy workforce and informed public.</li>
-      </ol>
-    </article>
-    <!-- END: MAIN CONTENT -->
-    <footer>
-      <!-- Florida Universities links with logos -->
-      <a href="http://www.ufl.edu/" target="_blank"><img src="img/logo_01.jpg" alt="University of Florida"></a>
-      <a href="http://www.fsu.edu/" target="_blank"><img src="img/logo_02.jpg" alt="Florida State University"></a>
-      <a href="http://www.ucf.edu/" target="_blank"><img src="img/logo_03.jpg" alt="University of Central Florida"></a>
-      <a href="http://www.usf.edu/" target="_blank"><img src="img/logo_04.jpg" alt="University of South Florida"></a>
-      <a href="http://www.famu.edu/" target="_blank"><img src="img/logo_05.jpg" alt="Florida A & M University"></a>
-      <a href="http://www.fau.edu/" target="_blank"><img src="img/logo_06.jpg" alt="Florida Atlantic University"></a>
-      <a href="http://www.fgcu.edu/" target="_blank"><img src="img/logo_07.jpg" alt="Florida Gulf Coast University"></a>
-      <a href="http://www.fiu.edu/" target="_blank"><img src="img/logo_08.jpg" alt="Florida International University"></a>
-      <a href="http://www.ncf.edu/" target="_blank"><img src="img/logo_09.jpg" alt="New College of Florida"></a>
-      <a href="http://www.unf.edu/" target="_blank"><img src="img/logo_10.jpg" alt="University of North Florida"></a>
-      <a href="http://www.uwf.edu/" target="_blank"><img src="img/logo_11.jpg" alt="University of West Florida"></a>
-      <a href="https://floridapolytechnic.org/" target="_blank"><img src="img/logo_12.jpg" alt="Florida Polytechnic University"></a>
-      <!-- Facebook share button -->
-      <iframe src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Ffloridaenergy.ufl.edu&layout=button_count&size=small&mobile_iframe=true&width=69&height=20&appId" width="69" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
-      <!-- Twitter share button -->
-      <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Hey+check+out%3A+floridaenergy.ufl.edu%21">Tweet</a>
-      <p>© 2008-2018 Florida Energy Systems Consortium.</p>
-    </footer>
+      <div id="main">
+        <div class="header"><img alt="FESC Logo" class="pure-img-responsive" src="img/header_logo.png"></div>
+        <!-- nav menu on top -->
+        <nav id="side-nav">
+          <div class="section group">
+            <ul>
+              <li class="col span_1_of_9">
+                <a href="#">About Us</a>
+              </li>
+              <li class="col span_1_of_9">
+                <a href="#">Florida Energy Facts</a>
+              </li>
+              <li class="col span_1_of_9">
+                <a href="#">FESC Expertise</a>
+              </li>
+              <li class="col span_1_of_9">
+                <a href="#">FL University Research</a>
+              </li>
+              <li class="col span_1_of_9">
+                <a href="#">Technology Commercialization</a>
+              </li>
+              <li class="col span_1_of_9">
+                <a href="#">FESC Conferences</a>
+              </li>
+              <li class="col span_1_of_9">
+                <a href="#">Annual Reports</a>
+              </li>
+              <li class="col span_1_of_9">
+                <a href="#">Frequently Asked Questions</a>
+              </li>
+              <li class="col span_1_of_9">
+                <a href="#">Links</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <!-- START: MAIN CONTENT -->
+        <div class="content">
+          <h2 class="content-subhead">Bringing Energy Solutions to Florida, the Nation and the World</h2>
+          <div class="videoWrapper">
+            <iframe height="315" src="https://www.youtube.com/embed/YA2ofbdd-G8?rel=0" width="560"></iframe>
+          </div>
+          <p>The Florida Energy Systems Consortium (FESC) was created by the Florida State government to promote collaboration among the energy experts at its 12 supported universities to share energy-related expertise.The consortium assists the state in the development and implementation of an environmentally compatible, sustainable, and efficient energy strategic plan.The Consortium was charged to <span class="inline-quote">&lsquo;perform research and development on innovative energy systems that lead to alternative energy strategies, improved energy efficiencies, and expanded economic development for the state.&rsquo;</span> The legislature appropriated funding for research at five of the universities as well as support for education, outreach, and technology commercialization.The Consortium reports to and provides guidance on an as needed basis to the Florida Legislature, Executive Office of the Governor, and the Florida's Office of Energy housed in the Florida Department of Agriculture and Consumer Services.</p>
+          <p>Overarching to the Consortium's research strategy is an energy systems approach to identify innovation opportunities, prepare an energy workforce, and guide economic development.</p>
+          <p>Through collaborative research and development across the State University System and the industry, the goal of the consortium is to become a world leader in energy research, education, technology, and energy systems analysis.In so doing, the consortium shall:</p>
+          <ol>
+            <li>Coordinate and initiate increased collaborative interdisciplinary energy research among the universities and the energy industry.</li>
+            <li>Assist in the creation and development of a Florida-based energy technology industry through efforts that would expedite commercialization of innovative energy technologies by taking advantage of the energy expertise within the State University System, high-technology incubators, industrial parks, and industry-driven research centers.</li>
+            <li>Provide a state resource for objective energy systems analysis.</li>
+            <li>Develop education and outreach programs to prepare a qualified energy workforce and informed public.</li>
+          </ol>
+          <!-- END: MAIN CONTENT -->
+          <footer>
+            <!-- Florida Universities links with logos -->
+            <div class="section group">
+              <div class="col span_1_of_6">
+                <a href="http://www.ufl.edu/" target="_blank"><img alt="University of Florida" src="img/logo_01.jpg"></a>
+              </div>
+              <div class="col span_1_of_6">
+                <a href="http://www.fsu.edu/" target="_blank"><img alt="Florida State University" src="img/logo_02.jpg"></a>
+              </div>
+              <div class="col span_1_of_6">
+                <a href="http://www.ucf.edu/" target="_blank"><img alt="University of Central Florida" src="img/logo_03.jpg"></a>
+              </div>
+              <div class="col span_1_of_6">
+                <a href="http://www.usf.edu/" target="_blank"><img alt="University of South Florida" src="img/logo_04.jpg"></a>
+              </div>
+              <div class="col span_1_of_6">
+                <a href="http://www.famu.edu/" target="_blank"><img alt="Florida A & M University" src="img/logo_05.jpg"></a>
+              </div>
+              <div class="col span_1_of_6">
+                <a href="http://www.fau.edu/" target="_blank"><img alt="Florida Atlantic University" src="img/logo_06.jpg"></a>
+              </div>
+            </div>
+            <div class="section group">
+              <div class="col span_1_of_6">
+                <a href="http://www.fgcu.edu/" target="_blank"><img alt="Florida Gulf Coast University" src="img/logo_07.jpg"></a>
+              </div>
+              <div class="col span_1_of_6">
+                <a href="http://www.fiu.edu/" target="_blank"><img alt="Florida International University" src="img/logo_08.jpg"></a>
+              </div>
+              <div class="col span_1_of_6">
+                <a href="http://www.ncf.edu/" target="_blank"><img alt="New College of Florida" src="img/logo_09.jpg"></a>
+              </div>
+              <div class="col span_1_of_6">
+                <a href="http://www.unf.edu/" target="_blank"><img alt="University of North Florida" src="img/logo_10.jpg"></a>
+              </div>
+              <div class="col span_1_of_6">
+                <a href="http://www.uwf.edu/" target="_blank"><img alt="University of West Florida" src="img/logo_11.jpg"></a>
+              </div>
+              <div class="col span_1_of_6">
+                <a href="https://floridapolytechnic.org/" target="_blank"><img alt="Florida Polytechnic University" src="img/logo_12.jpg"></a>
+              </div>
+            </div>
+            <!-- Facebook share button -->
+            <iframe frameborder="0" height="20" scrolling="no" src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Ffloridaenergy.ufl.edu&layout=button_count&size=small&mobile_iframe=true&width=69&height=20&appId" style="border:none;overflow:hidden" width="69"></iframe> <!-- Twitter share button -->
+            <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Hey+check+out%3A+floridaenergy.ufl.edu%21">Tweet</a> <button class="pure-button pure-button-primary button-xsmall"><i class="fas fa-arrow-circle-down"></i>Download our brochure</button>
+            <ul class="social-menu">
+              <li>
+                <a href=""><i class="fab fa-facebook"></i></a>
+              </li>
+              <li>
+                <a href=""><i class="fab fa-twitter"></i></a>
+              </li>
+              <li>
+                <a href=""><i class="fab fa-linkedin"></i></a>
+              </li>
+              <li>
+                <a href=""><i class="fab fa-youtube"></i></a>
+              </li>
+            </ul>
+            <p>© 2008-2018 Florida Energy Systems Consortium.</p>
+          </footer>
+        </div>
+      </div>
+    </div>
+    <script src="scripts/script.js"></script>
   </body>
 </html>

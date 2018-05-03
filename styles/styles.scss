@@ -1,0 +1,362 @@
+$font-body: Imprima, sans-serif;
+$font-display: 'Ubuntu Mono', monospace;
+$refreshing-green: #007849;
+body {
+  color: #262228;
+  font: 100% $font-body;
+}
+h2 {
+  font-family: $font-display;
+  text-align: center;
+}
+/* -- top nav --*/
+
+/* SECTIONS */
+
+.section {
+  clear: both;
+  padding: 0px;
+  margin: 0px;
+}
+/* COLUMN SETUP */
+
+.col {
+  display: block;
+  float: left;
+  margin: 1% 0 1% 1.6%;
+}
+.col:first-child {
+  margin-left: 0;
+}
+/* GROUPING */
+
+.group:before, .group:after {
+  content: "";
+  display: table;
+}
+.group:after {
+  clear: both;
+}
+.group {
+  zoom: 1;
+  /* For IE 6/7 */
+}
+/* GRID OF NINE */
+
+.span_9_of_9 {
+  width: 100%;
+}
+.span_8_of_9 {
+  width: 88.71%;
+}
+.span_7_of_9 {
+  width: 77.42%;
+}
+.span_6_of_9 {
+  width: 66.13%;
+}
+.span_5_of_9 {
+  width: 54.84%;
+}
+.span_4_of_9 {
+  width: 43.55%;
+}
+.span_3_of_9 {
+  width: 32.26%;
+}
+.span_2_of_9 {
+  width: 20.97%;
+}
+.span_1_of_9 {
+  width: 9.688%;
+}
+/* GRID OF ELEVEN */
+
+.span_11_of_11 {
+  width: 100%;
+}
+.span_10_of_11 {
+  width: 90.76%;
+}
+.span_9_of_11 {
+  width: 81.52%;
+}
+.span_8_of_11 {
+  width: 72.29%;
+}
+.span_7_of_11 {
+  width: 63.05%;
+}
+.span_6_of_11 {
+  width: 53.81%;
+}
+.span_5_of_11 {
+  width: 44.58%;
+}
+.span_4_of_11 {
+  width: 35.34%;
+}
+.span_3_of_11 {
+  width: 26.10%;
+}
+.span_2_of_11 {
+  width: 16.87%;
+}
+.span_1_of_11 {
+  width: 7.636%;
+}
+/* GRID OF SIX */
+
+.span_6_of_6 {
+  width: 100%;
+}
+.span_5_of_6 {
+  width: 83.06%;
+}
+.span_4_of_6 {
+  width: 66.13%;
+}
+.span_3_of_6 {
+  width: 49.2%;
+}
+.span_2_of_6 {
+  width: 32.26%;
+}
+.span_1_of_6 {
+  width: 15.33%;
+}
+/* GO FULL WIDTH BELOW 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+  .col {
+    margin: 1% 0 1% 0%;
+  }
+  .span_1_of_9, .span_2_of_9, .span_3_of_9, .span_4_of_9, .span_5_of_9, .span_6_of_9, .span_7_of_9, .span_8_of_9, .span_9_of_9, .span_1_of_11, .span_2_of_11, .span_3_of_11, .span_4_of_11, .span_5_of_11, .span_6_of_11, .span_7_of_11, .span_8_of_11, .span_9_of_11, .span_10_of_11, .span_11_of_11, .span_1_of_6, .span_2_of_6, .span_3_of_6, .span_4_of_6, .span_5_of_6, .span_6_of_6 {
+    width: 100%;
+  }
+}
+nav {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+  }
+  li {
+    display: inline-block;
+  }
+  a {
+    display: block;
+    padding: 3px 7px;
+    text-decoration: none;
+    font-size: .77em;
+    color: #0375B4;
+  }
+}
+.pure-img-responsive {
+  max-width: 100%;
+  height: auto;
+}
+.button-xsmall {
+  font-size: 77%;
+}
+/* Add transition to containers so they can push in and out. */
+
+#layout, #menu, .menu-link {
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+/* This is the parent `<div>` that contains the menu and the content area. */
+
+#layout {
+  position: relative;
+  left: 0;
+  padding-left: 0;
+}
+#layout.active #menu {
+  left: 150px;
+  width: 150px;
+}
+#layout.active .menu-link {
+  left: 150px;
+}
+/* The content `<div>` is where all the main content goes. */
+
+.content {
+  margin: 0 auto;
+  padding: 0 2em;
+  max-width: 800px;
+  margin-bottom: 50px;
+  line-height: 1.6em;
+}
+.header {
+  margin: 0;
+  color: #333;
+  text-align: center;
+  padding: 2.5em 2em 0;
+  border-bottom: 1px solid #eee;
+}
+.header h1 {
+  margin: 0.2em 0;
+  font-size: 3em;
+  font-weight: 300;
+}
+.header h2 {
+  font-weight: 300;
+  color: #ccc;
+  padding: 0;
+  margin-top: 0;
+}
+.content-subhead {
+  margin: 50px 0 20px 0;
+  font-weight: 300;
+  color: $refreshing-green;
+}
+/* The `#menu` `<div>` is the parent `<div>` that contains the `.pure-menu` that appears on the left side of the page. */
+
+#menu {
+  margin-left: -150px;
+  /* "#menu" width */
+  width: 150px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 1000;
+  /* so the menu or its navicon stays above all content */
+  background: #191818;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+/* All anchors inside the menu should be styled like this. */
+
+#menu a {
+  color: #999;
+  border: none;
+  padding: 0.6em 0 0.6em 0.6em;
+}
+/* Remove all background/borders, since we are applying them to #menu. */
+
+#menu .pure-menu, #menu .pure-menu ul {
+  border: none;
+  background: transparent;
+}
+/* Add that light border to separate items into groups. */
+
+#menu .pure-menu ul, #menu .pure-menu .menu-item-divided {
+  border-top: 1px solid #333;
+}
+/* Change color of the anchor links on hover/focus. */
+
+#menu .pure-menu li a:hover, #menu .pure-menu li a:focus {
+  background: #333;
+}
+/* This styles the selected menu item `<li>`. */
+
+#menu .pure-menu-selected, #menu .pure-menu-heading {
+  background: #FFCE00;
+}
+/* This styles a link within a selected menu item `<li>`. */
+
+#menu .pure-menu-selected a {
+  color: $refreshing-green;
+}
+/* This styles the menu heading. */
+
+#menu .pure-menu-heading {
+  font-size: 148%;
+  color: $refreshing-green;
+  margin: 0;
+}
+/* -- Dynamic Button For Responsive Menu --*/
+
+/* `.menu-link` represents the responsive menu toggle that shows/hides on small screens. */
+
+.menu-link {
+  position: fixed;
+  display: block;
+  /* show this only on small screens */
+  top: 0;
+  left: 0;
+  /* "#menu width" */
+  background: #000;
+  background: rgba(0, 0, 0, 0.7);
+  font-size: 10px;
+  /* change this value to increase/decrease button size */
+  z-index: 10;
+  width: 2em;
+  height: auto;
+  padding: 2.1em 1.6em;
+}
+.menu-link:hover, .menu-link:focus {
+  background: #000;
+}
+.menu-link span {
+  position: relative;
+  display: block;
+}
+.menu-link span, .menu-link span:before, .menu-link span:after {
+  background-color: $refreshing-green;
+  width: 100%;
+  height: 0.2em;
+}
+.menu-link span:before, .menu-link span:after {
+  position: absolute;
+  margin-top: -0.6em;
+  content: " ";
+}
+.menu-link span:after {
+  margin-top: 0.6em;
+}
+/* -- Responsive Styles (Media Queries) ------------------------------------- */
+
+/* Hides the menu at `48em` */
+
+@media (min-width: 48em) {
+  .header, .content {
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+  #layout {
+    padding-left: 150px;
+    /* left col width "#menu" */
+    left: 0;
+  }
+  #menu {
+    left: 150px;
+  }
+  .menu-link {
+    position: fixed;
+    left: 150px;
+    display: none;
+  }
+  #layout.active .menu-link {
+    left: 150px;
+  }
+}
+@media (max-width: 48em) {
+  /* Only apply this when the window is small. Otherwise, the following case results in extra padding on the left: * Make the window small. * Tap the menu to trigger the active state. * Make the window large again. */
+  #layout.active {
+    position: relative;
+    left: 150px;
+  }
+}
+/* -- Responsive iframe --*/
+
+.videoWrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+}
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
