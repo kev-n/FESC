@@ -27,6 +27,89 @@
     <link href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css" rel="stylesheet">
     <link href="styles/styles.css" rel="stylesheet">
     <!-- END: stylesheets -->
+    <!-- BEGIN: Google Charts -->
+    <!--Load the AJAX API-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      // Load the Visualization API and the corechart package.
+      google.charts.load('current', {'packages':['corechart']});
+      // Set a callback to run when the Google Visualization API is loaded.
+      google.charts.setOnLoadCallback(drawChart);
+      // Callback that creates and populates a data table, instantiates the pie chart, passes in the data and draws it.
+      function drawChart() {
+        // Create the data table.
+        var data = google.visualization.arrayToDataTable([
+          ['Year', 'Billion Btu'],
+          ['2015', 234192],
+          ['2014', 226863],
+          ['2013', 229666],
+          ['2012', 220020],
+          ['2011', 222956],
+          ['2010', 223518],
+          ['2009', 213642],
+          ['2008', 195232],
+          ['2007', 190489],
+          ['2006', 185564],
+          ['2005', 183175],
+          ['2004', 179462],
+          ['2003', 188473],
+          ['2002', 174327],
+          ['2001', 158038],
+          ['2000', 194952],
+          ['1999', 204114],
+          ['1998', 205485],
+          ['1997', 231308],
+          ['1996', 240343],
+          ['1995', 220211],
+          ['1994', 215563],
+          ['1993', 217028],
+          ['1992', 230779],
+          ['1991', 212955],
+          ['1990', 198986],
+          ['1989', 232261],
+          ['1988', 113802],
+          ['1987', 107606],
+          ['1986', 116356],
+          ['1985', 110698],
+          ['1984', 108740],
+          ['1983', 91705],
+          ['1982', 104674],
+          ['1981', 83117],
+          ['1980', 90049],
+          ['1979', 69419],
+          ['1978', 65357],
+          ['1977', 59953],
+          ['1976', 56507],
+          ['1975', 50007],
+          ['1974', 52429],
+          ['1973', 56250],
+          ['1972', 54389],
+          ['1971', 49968],
+          ['1970', 51035],
+          ['1969', 51489],
+          ['1968', 49556],
+          ['1967', 44550],
+          ['1966', 42760],
+          ['1965', 39916],
+          ['1964', 39016],
+          ['1963', 38613],
+          ['1962', 35826],
+          ['1961', 34417],
+          ['1960', 35680]
+        ]);
+        // Set chart options
+        var options = {
+          title: 'Renewable Energy Production Florida',
+          hAxis: {title: 'Year',  titleTextStyle: {color: '#333'}, direction: -1},
+          vAxis: {minValue: 0},
+          legend: {position: 'bottom'}
+        };
+        // Instantiate and draw our chart, passing in some options.
+        var chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
+    <!-- END: Google Charts -->
   </head>
   <body>
     <div id="layout">
@@ -124,6 +207,9 @@
           <h3>Research Vision</h3>
           <p>The Florida Energy System Consortium (FESC) performs scholarly research and analysis of energy systems that contributes to a sustainable energy economy for Florida. In formulating a research plan for FESC, it became obvious that while most current university research was focused on specific energy components, a research gap existed from a systems perspective. It was believed that combining expertise at the State universities would position university researchers to address energy systems in a manner not possible at a single university. Building on this observation, our stated vision is to <em>be a world leader in energy research enabled by a systems approach</em>.</p>
           <p>The Florida Energy Systems Consortium research funding was designated for FAU, FIU, FSU, UCF, UF, and USF. The FESC Steering Committee set a collaborative university research agenda that focuses on those areas that can most impact the State of Florida. This agenda has an overarching strategic research direction of understanding Florida’s energy systems.By doing so, the Consortium provides meaningful analyses to guide the development of a State strategic energy plan, identify opportunities for improved efficiency, and assess the impact of proposed changes, all of which lead to more informed actions.</p>
+          <!--Div that will hold the area chart-->
+          <div id="chart_div" style="width: 100%; height: 500px;"></div>
+          <p class="source">source: <a href="https://www.eia.gov/opendata/qb.php?sdid=SEDS.REPRB.FL.A">U.S. Energy Information Administration</a></p>
           <h2>Strategic Research Thrusts of FESC</h2>
           <ul>
             <li>Understanding Florida’s Energy Systems (Overarching)</li>
@@ -139,40 +225,40 @@
             <!-- Florida Universities links with logos -->
             <ul class="uni_net">
               <li class="uni_logo">
-                <a href= "http://www.ufl.edu" target="_blank"><img src="img/logo_01.jpg"  alt="University of Florida"></a>
+                <a href="http://www.ufl.edu" target="_blank"><img src="img/logo_01.jpg"  alt="University of Florida"></a>
               </li>
               <li class="uni_logo">
-                <a href= "http://www.fsu.edu" target="_blank"><img src="img/logo_02.jpg" alt="Florida State University" ></a>
+                <a href="http://www.fsu.edu" target="_blank"><img src="img/logo_02.jpg" alt="Florida State University" ></a>
               </li>
               <li class="uni_logo">
-                <a href= "http://www.ucf.edu" target="_blank"><img src="http://floridaenergy.ufl.edu/wp-content/themes/fesc/images/logo_03.jpg" alt="University of Central Florida"/></a>
+                <a href="http://www.ucf.edu" target="_blank"><img src="http://floridaenergy.ufl.edu/wp-content/themes/fesc/images/logo_03.jpg" alt="University of Central Florida"/></a>
               </li>
               <li class="uni_logo">
-                <a href= "http://www.usf.edu" target="_blank"><img src="img/logo_04.jpg" alt="University of South Florida"></a>
+                <a href="http://www.usf.edu" target="_blank"><img src="img/logo_04.jpg" alt="University of South Florida"></a>
               </li>
               <li class="uni_logo">
-                <a href= "http://www.famu.edu" target="_blank"><img src="img/logo_05.jpg" alt="Florida A & M University"></a>
+                <a href="http://www.famu.edu" target="_blank"><img src="img/logo_05.jpg" alt="Florida A & M University"></a>
               </li>
               <li class="uni_logo">
-                <a href= "http://www.fau.edu" target="_blank"><img src="img/logo_06.jpg"  alt="Florida Atlantic University"></a>
+                <a href="http://www.fau.edu" target="_blank"><img src="img/logo_06.jpg"  alt="Florida Atlantic University"></a>
               </li>
               <li class="uni_logo">
-                <a href= "http://www.fgcu.edu" target="_blank"><img src="img/logo_07.jpg" alt="Florida Gulf Coast University" ></a>
+                <a href="http://www.fgcu.edu" target="_blank"><img src="img/logo_07.jpg" alt="Florida Gulf Coast University" ></a>
               </li>
               <li class="uni_logo">
-                <a href= "http://www.fiu.edu" target="_blank"><img src="img/logo_08.jpg" alt="Florida International University"></a>
+                <a href="http://www.fiu.edu" target="_blank"><img src="img/logo_08.jpg" alt="Florida International University"></a>
               </li>
               <li class="uni_logo">
-                <a href= "http://www.ncf.edu" target="_blank"><img src="img/logo_09.jpg" alt="New College of Florida"></a>
+                <a href="http://www.ncf.edu" target="_blank"><img src="img/logo_09.jpg" alt="New College of Florida"></a>
               </li>
               <li class="uni_logo">
-                <a href= "http://www.unf.edu" target="_blank"><img src="img/logo_10.jpg" alt="University of North Florida"/></a>
+                <a href="http://www.unf.edu" target="_blank"><img src="img/logo_10.jpg" alt="University of North Florida"/></a>
               </li>
               <li class="uni_logo">
-                <a href= "http://www.uwf.edu" target="_blank"><img src="img/logo_11.jpg" alt="University of West Florida"></a>
+                <a href="http://www.uwf.edu" target="_blank"><img src="img/logo_11.jpg" alt="University of West Florida"></a>
               </li>
               <li class="uni_logo">
-                <a href= "https://floridapolytechnic.org/" target="_blank"><img src=img/logo_12.jpg alt="Florida Polytechnic University"/></a>
+                <a href="https://floridapolytechnic.org/" target="_blank"><img src=img/logo_12.jpg alt="Florida Polytechnic University"/></a>
               </li>
             </ul>
             <div class="socialIcons">
