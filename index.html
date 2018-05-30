@@ -27,6 +27,10 @@
     <link href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css" rel="stylesheet">
     <link href="styles/styles.css" rel="stylesheet">
     <!-- END: stylesheets -->
+    <!-- START: Vue.js framework -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="scripts/components.js"></script>
+    <!-- END: Vue.js framework -->
     <!-- START: Twitter JS widget -->
     <script>
       window.twttr = (function(d, s, id) {
@@ -102,8 +106,8 @@
         </div>
       </div>
       <div id="main">
-        <div class="header">
-          <img alt="FESC Logo" class="pure-img-responsive" src="img/header_logo.png">
+        <div id="header-logo">
+          <headerlogo></headerlogo>
         </div>
         <!-- nav menu on top -->
         <nav id="side-nav">
@@ -145,9 +149,11 @@
           <div class="videoWrapper">
             <iframe height="315" src="https://www.youtube.com/embed/YA2ofbdd-G8?rel=0" width="560"></iframe>
           </div>
-          <button class="pure-button pure-button-primary button-xsmall">
-          <i class="fas fa-arrow-circle-down"></i>Download our brochure
-          </button>
+          <div id="button-message">
+            <button v-bind:title="message" class="pure-button pure-button-primary button-xsmall">
+            <i class="fas fa-arrow-circle-down"></i>Download our brochure
+            </button>
+          </div>
           <p>The Florida Energy Systems Consortium (FESC) was created by the Florida State government to promote collaboration among the energy experts at its 12 supported universities to share energy-related expertise.The consortium assists the state in the development and implementation of an environmentally compatible, sustainable, and efficient energy strategic plan.The Consortium was charged to 
             <span class="inline-quote">&lsquo;perform research and development on innovative energy systems that lead to alternative energy strategies, improved energy efficiencies, and expanded economic development for the state.&rsquo;</span> The legislature appropriated funding for research at five of the universities as well as support for education, outreach, and technology commercialization.The Consortium reports to and provides guidance on an as needed basis to the Florida Legislature, Executive Office of the Governor, and the Florida's Office of Energy housed in the Florida Department of Agriculture and Consumer Services.
           </p>
@@ -166,75 +172,16 @@
           <!-- END: MAIN CONTENT -->
           <footer>
             <!-- Florida Universities links with logos -->
-            <ul class="uni_net">
-              <li class="uni_logo">
-                <a href= "http://www.ufl.edu" target="_blank">
-                <img src="img/logo_01.jpg"  alt="University of Florida">
-                </a>
-              </li>
-              <li class="uni_logo">
-                <a href= "http://www.fsu.edu" target="_blank">
-                <img src="img/logo_02.jpg" alt="Florida State University" >
-                </a>
-              </li>
-              <li class="uni_logo">
-                <a href= "http://www.ucf.edu" target="_blank">
-                <img src="http://floridaenergy.ufl.edu/wp-content/themes/fesc/images/logo_03.jpg" alt="University of Central Florida"/>
-                </a>
-              </li>
-              <li class="uni_logo">
-                <a href= "http://www.usf.edu" target="_blank">
-                <img src="img/logo_04.jpg" alt="University of South Florida">
-                </a>
-              </li>
-              <li class="uni_logo">
-                <a href= "http://www.famu.edu" target="_blank">
-                <img src="img/logo_05.jpg" alt="Florida A & M University">
-                </a>
-              </li>
-              <li class="uni_logo">
-                <a href= "http://www.fau.edu" target="_blank">
-                <img src="img/logo_06.jpg"  alt="Florida Atlantic University">
-                </a>
-              </li>
-              <li class="uni_logo">
-                <a href= "http://www.fgcu.edu" target="_blank">
-                <img src="img/logo_07.jpg" alt="Florida Gulf Coast University" >
-                </a>
-              </li>
-              <li class="uni_logo">
-                <a href= "http://www.fiu.edu" target="_blank">
-                <img src="img/logo_08.jpg" alt="Florida International University">
-                </a>
-              </li>
-              <li class="uni_logo">
-                <a href= "http://www.ncf.edu" target="_blank">
-                <img src="img/logo_09.jpg" alt="New College of Florida">
-                </a>
-              </li>
-              <li class="uni_logo">
-                <a href= "http://www.unf.edu" target="_blank">
-                <img src="img/logo_10.jpg" alt="University of North Florida"/>
-                </a>
-              </li>
-              <li class="uni_logo">
-                <a href= "http://www.uwf.edu" target="_blank">
-                <img src="img/logo_11.jpg" alt="University of West Florida">
-                </a>
-              </li>
-              <li class="uni_logo">
-                <a href= "https://floridapolytechnic.org/" target="_blank">
-                <img src=img/logo_12.jpg alt="Florida Polytechnic University"/>
-                </a>
-              </li>
-            </ul>
-            <div class="socialIcons">
-              <p>- Follow Us -</p>
-              <a href="#"><i id="social-fb" class="fab fa-facebook-square fa-3x social"></i></a>
-              <a href="#"><i id="social-tw" class="fab fa-twitter-square fa-3x social"></i></a>
-              <a href="#"><i id="social-li" class="fab fa-linkedin fa-3x social"></i></a>
+            <div id="FooterUniversities">
+              <footer-section></footer-section>
             </div>
-            <p>© 2008-2018 Florida Energy Systems Consortium.</p>
+            <!-- social media links with logos -->
+            <div id="social-icons">
+              <social-menu></social-menu>
+            </div>
+            <div id="hover-message">
+              <p v-bind:title="message">© 2008-2018 Florida Energy Systems Consortium.</p>
+            </div>
           </footer>
         </div>
       </div>
