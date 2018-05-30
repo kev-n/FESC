@@ -52,30 +52,8 @@ var app = new Vue({
 })
 
 var app = new Vue({
-  el: '#research-list',
-  data: {
-    items: [
-      { message: 'Understanding Florida’s Energy Systems (Overarching)' },
-      { message: 'Enhancing Energy Efficiency and Conservation' },
-      { message: 'Developing Florida’s Biomass Resources' },
-      { message: 'Harnessing Florida’s Solar Resources' },
-      { message: 'Ensuring Nuclear Energy & Carbon Constrained Technologies for Electric Power in Florida' },
-      { message: 'Exploiting Florida’s Ocean Energy Resources' },
-      { message: 'Securing our Energy Storage and Delivery Infrastructure' }
-    ]
-  }
-})
-
-var app = new Vue({
   el: '#hover-message',
   data: {
     message: 'Bringing Energy Solutions to Florida, the Nation and the World '
-  }
-})
-
-var app = new Vue({
-  el: '#button-message',
-  data: {
-    message: 'Please download our informational brochure'
   }
 })

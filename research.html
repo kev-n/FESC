@@ -28,7 +28,7 @@
     <link href="styles/styles.css" rel="stylesheet">
     <!-- END: stylesheets -->
     <!-- START: Vue.js framework -->
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <script src="scripts/components.js"></script>
     <!-- END: Vue.js framework -->
     <!-- BEGIN: Google Charts -->
@@ -217,10 +217,14 @@
           <div id="chart_div" style="width: 100%; height: 500px;"></div>
           <p class="source">source: <a href="https://www.eia.gov/opendata/qb.php?sdid=SEDS.REPRB.FL.A">U.S. Energy Information Administration</a></p>
           <h2>Strategic Research Thrusts of FESC</h2>
-          <ul id="research-list">
-            <li v-for="item in items">
-              {{ item.message }}
-            </li>
+          <ul>
+            <li>Understanding Florida’s Energy Systems (Overarching)</li>
+            <li>Enhancing Energy Efficiency and Conservation</li>
+            <li>Developing Florida’s Biomass Resources</li>
+            <li>Harnessing Florida’s Solar Resources</li>
+            <li>Ensuring Nuclear Energy &amp; Carbon Constrained Technologies for Electric Power in Florida</li>
+            <li>Exploiting Florida’s Ocean Energy Resources</li>
+            <li>Securing our Energy Storage and Delivery Infrastructure</li>
           </ul>
           <!-- END: MAIN CONTENT -->
           <footer>
