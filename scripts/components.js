@@ -2,7 +2,7 @@ Vue.component('headerlogo', {
   template: `<div class="header">
                <img alt="FESC Logo" class="pure-img-responsive" src="img/header_logo.png">
              </div>`
-})
+});
 
 Vue.component('footer-section', {
   template: `<ul class="uni_net">
@@ -13,7 +13,7 @@ Vue.component('footer-section', {
                 <a href="http://www.fsu.edu" target="_blank"><img src="img/logo_02.jpg" alt="Florida State University" ></a>
               </li>
               <li class="uni_logo">
-                <a href="http://www.ucf.edu" target="_blank"><img src="http://floridaenergy.ufl.edu/wp-content/themes/fesc/images/logo_03.jpg" alt="University of Central Florida"/></a>
+                <a href="http://www.ucf.edu" target="_blank"><img src="img/logo_03.jpg" alt="University of Central Florida"/></a>
               </li>
               <li class="uni_logo">
                 <a href="http://www.usf.edu" target="_blank"><img src="img/logo_04.jpg" alt="University of South Florida"></a>
@@ -43,7 +43,7 @@ Vue.component('footer-section', {
                 <a href="https://floridapolytechnic.org/" target="_blank"><img src=img/logo_12.jpg alt="Florida Polytechnic University"/></a>
               </li>
             </ul>`
-})
+});
 
 Vue.component('social-menu', {
   template: `<div class="socialIcons">
@@ -52,4 +52,4 @@ Vue.component('social-menu', {
               <a href="#"><i id="social-tw" class="fab fa-twitter-square fa-3x social"></i></a>
               <a href="#"><i id="social-li" class="fab fa-linkedin fa-3x social"></i></a>
             </div>`
-})
+});

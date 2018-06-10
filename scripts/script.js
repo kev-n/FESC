@@ -1,3 +1,4 @@
+"use strict";
 (function(window, document) {
   var layout = document.getElementById('layout'),
     menu = document.getElementById('menu'),
@@ -37,23 +38,19 @@
     }
   };
 }(this, this.document));
-
 //Vue.js
 var app = new Vue({
   el: '#header-logo'
-})
-
+});
 var app = new Vue({
   el: '#FooterUniversities'
-})
-
+});
 var app = new Vue({
   el: '#social-icons'
-})
-
+});
 var app = new Vue({
   el: '#hover-message',
   data: {
     message: 'Bringing Energy Solutions to Florida, the Nation and the World '
   }
-})
+});

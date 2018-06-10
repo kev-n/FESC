@@ -1,3 +1,8 @@
 # Google Charts Representing Energy Data in Florida
 
 In order to visualize the energy data, the [Google Charts](https://developers.google.com/chart/) library was used. For the renewable energy production in Florida data, an [area chart](https://developers.google.com/chart/interactive/docs/gallery/areachart) was applied. For the electricity total consumption (i.e. sold) in Florida data, a [line chart](https://developers.google.com/chart/interactive/docs/gallery/linechart) was implemented. The configuration option of `hAxis: {direction: -1}` reversed the data for the years along the horizontal axis so the charts would read from older to newer (left to right) on both charts. Since both sets of data captured the progressive nature of energy production and consumption advancing over the years, charts with a horizontal and vertical axis displays the information nicely. 
+
+# U.S. Energy Information Administration API Data
+
+[Documentation for the "FL Total Consumption"](https://www.eia.gov/opendata/qb.php?category=40236&sdid=SEDS.TETCB.FL.A)
+[Documentation for the "FL Renewable Energy Production"](https://www.eia.gov/opendata/qb.php?category=40426&sdid=SEDS.REPRB.FL.A)
