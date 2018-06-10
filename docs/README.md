@@ -4,5 +4,4 @@ In order to visualize the energy data, the [Google Charts](https://developers.go
 
 # U.S. Energy Information Administration API Data
 
-*[Documentation for the "FL Total Consumption"](https://www.eia.gov/opendata/qb.php?category=40236&sdid=SEDS.TETCB.FL.A)
-*[Documentation for the "FL Renewable Energy Production"](https://www.eia.gov/opendata/qb.php?category=40426&sdid=SEDS.REPRB.FL.A)
+ The data used for the "FL Total Electricity Consumption" and "FL Renewable Energy Production" charts may be found [here](https://www.eia.gov/opendata/qb.php?category=40236&sdid=SEDS.TETCB.FL.A) and [here](https://www.eia.gov/opendata/qb.php?category=40426&sdid=SEDS.REPRB.FL.A), respectively.
